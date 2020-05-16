@@ -3,7 +3,7 @@ using UnityEngine.ParticleSystemJobs;
  [RequireComponent(typeof(ParticleSystem))]
 public class ParticleJob : MonoBehaviour
 {
-    public ParticleSystem m_ParticleSystem;
+    ParticleSystem m_ParticleSystem;
     UpdateParticlesJob m_Job = new UpdateParticlesJob();
  
     private void Awake()
@@ -13,7 +13,7 @@ public class ParticleJob : MonoBehaviour
     }
     public void MainStart()
     {
-        Debug.Log("test");
+        //Debug.Log("test");
         
         m_ParticleSystem.Simulate(2.0f);
         m_ParticleSystem.Play();
@@ -21,7 +21,7 @@ public class ParticleJob : MonoBehaviour
  
         var main = m_ParticleSystem.main;
         main.simulationSpeed = 0.0f;
-        this.gameObject.SetActive(false);
+        //this.gameObject.SetActive(false);
     }
     void OnParticleUpdateJobScheduled()
     {

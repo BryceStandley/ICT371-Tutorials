@@ -31,7 +31,6 @@ public class ParticleController : MonoBehaviour
             unityParticeSystem.Stop();
             vfxGraph.Stop();
             particleJobSystem.SetActive(true);
-            particleJobSystem.GetComponent<ParticleJob>().m_ParticleSystem.Play();
         }
     }
 }
